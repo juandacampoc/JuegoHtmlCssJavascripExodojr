@@ -1,0 +1,39 @@
+body, html {
+  height: 100%;
+  background: #006E7F;
+}
+
+#pelota {
+  width: 20px;
+  height: 20px;
+  background: #B22727;
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+}
+
+.barra{
+    width: 20px;
+    height: 100px;
+    background: #F8CB2E;
+    border: 4px solid #fff;
+}
+
+#bar1{
+    top:0;
+    float: left;  /* poner a flotar el elemento para posicionarlo */
+    position: absolute; /*  */
+}
+
+#bar2{
+    top: 10px;
+    right: 0px;
+    position: absolute;
+}
+#malla{
+    width: 50%;
+    border-right: #fff dashed 5px;
+    height: 100%;
+}
