@@ -37,3 +37,28 @@ body, html {
     border-right: #fff dashed 5px;
     height: 100%;
 }
+
+
+
+/* ESTILOS DE LOS PUNTAJES  */
+
+
+.cont-resultado{
+  position: absolute;
+  display: inline-flex;
+  top: 0;
+  left: auto;
+}
+.cont-resultado h3{
+  font-size: 5rem;
+  margin: auto 10rem;
+  color: #c71c81;
+}
+
+/* ESTILOS DEL BOTON DE MUSICA */
+
+.contenBtnAudio{
+  position: absolute;
+  bottom: 17px;
+  right: 0px;
+}

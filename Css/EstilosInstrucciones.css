@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+    min-height: 96vh;
+    background-image: url(/Images/fondoJuego.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+body:before{
+    content: "";
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background: linear-gradient(90deg, #52c4df, #ad55c1);
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+
+}
+.titulo1, .titulo2{
+    font-size: 45px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #af1fcb;
+    background-color: rgba(234, 236, 241, 0.397);
+}
+p{
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+button{
+    padding: 10px 25px;
+    font-size: 30px;
+    line-height: 40px;
+    min-width: 150px;
+    text-align: center;
+    cursor: pointer;
+    background: linear-gradient( to right bottom, #af1fcb, #c71c81);
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+}

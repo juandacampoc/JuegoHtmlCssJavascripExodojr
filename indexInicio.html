@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Css/stylehome.css">
+
+    <title> ProPlayer | Home </title>
+</head>
+<body>
+    <main class="fondo">
+        <div class="container">
+            <section class="lado1">
+                <div>
+                    <img class="logo" src="/Images/logo3.png" alt="">
+                </div>
+            </section>
+            <section class="lado2">
+                    <h1 class="titulo">Retalo Ahora!</h1>
+                    <button class="juego1">
+                        <a href="instrucciones.html">Video e Instrucciones</a>
+                    </button>
+                    <button class="juego2">
+                        <a href="/Index.html">Pong Multi-Player</a>
+                    </button>
+
+                    <div class="contenBtnAudio contAudio">
+                        <audio id="audio" volumen=20>
+                            <source src="/Audios/MusicaJuego.mp3" type="audio/mpeg">
+                        </audio>
+                        <button id="playPauseBtn" class="btnaudio" onclick="playPause()">Musica &#9658</button>
+                        
+                    </div>
+
+            </section>
+        </div>
+    </main>
+    <script src="/Js/musica-fondo.js"></script>
+</body>
+</html>

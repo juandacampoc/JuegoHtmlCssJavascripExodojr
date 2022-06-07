@@ -9,12 +9,17 @@ var game = function(){
     let controlGame;
     let player1;
     let player2;
+    
+    let contadorp1 = 0;
+    let contadorp2 = 0;
+    let cont_player1 = document.getElementById('resultado');
+    let cont_player2 = document.getElementById('resultado2');
+
 
     function start(){
         init();
         controlGame = setInterval(play, time);
     }
-
     function init(){
         pelota.style.left = 0;
         pelota.state = 1;
@@ -26,7 +31,6 @@ var game = function(){
         player2.keyPress = false;
         player2.keyCode = null;
     }
-
     function stop(){
         clearInterval(controlGame);
         document.body.style.background = "#f00";
@@ -36,19 +40,41 @@ var game = function(){
         moveBall();
         moveBar();
         checkIfLost();
+        
     }
 
+    let sonido = new Audio('../Audios/ponpong-def.mp3');
+   /*  function efecto() {
+        sonido.play();
+    } */
+
     function checkIfLost(){
-        if(pelota.offsetLeft >= width){
+        if(pelota.offsetLeft >= width){           
+            cont_player1.innerHTML = ++contadorp1;
+            alert("Punto player 1");
+
+            clearInterval(controlGame);
+            //start();
+            start();
+
+        }if (contadorp1 == 5) {
             stop();
-            alert("punto player 1");
-            /* console.log("punto player 1"); */
+            alert('El Ganador es el Jugador1 Con 5 Puntos')
         }
-        if(pelota.offsetLeft <= 0){
+
+        if(pelota.offsetLeft < 0){
+            cont_player2.innerHTML = ++contadorp2;
+            alert("Punto player 2");
+
+            clearInterval(controlGame);
+            //start();
+            start();
+
+        }if (contadorp2 == 5) {
             stop();
-            /* console.log("punto player 2"); */
-            alert("punto player 2");
+            alert('El Ganador es el Jugador2 Con 5 Puntos')
         }
+       
     }
 
     function moveBall(){
@@ -74,7 +100,6 @@ var game = function(){
     }
 
     function checkStateBall(){
-
         if(collidePlayer2()){
             pelota.direction = 2;
             if(pelota.state == 1) pelota.state = 3;
@@ -84,7 +109,6 @@ var game = function(){
             if(pelota.state == 3) pelota.state = 1;
             if(pelota.state == 4) pelota.state = 2;
         }
-
         if(pelota.direction ===1){
             if(pelota.offsetTop >= height) pelota.state=2;
             else if(pelota.offsetTop <=0 ) pelota.state=1;

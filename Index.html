@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-    <!-- aqui esta el llamado al css para los estilos -->
-    <link rel="stylesheet" href="./Css/Estilos.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./Css/Estilos.css" />
+    <link rel="stylesheet" href="./Css/stylehome.css" />
     <title>ProPlayer</title>
+  </head>
 
-
-</head>
-<body>
-    <!-- aqui se pondra la pelota este es uno de los mas importantes  -->
+  <body onload="cargarBody();"> <!-- este nos sirve para poner la musica al fondo del juego  -->
+   
     <div id="pelota"></div>
-    
-<!-- aqui estan las raquetas o los dos jugadores -->
-    
+
     <div id="bar1" class="barra"></div>
     <div id="bar2" class="barra"></div>
-    
-<!-- esta es la linea que divide el centro del juego o la malla que identifica la mitad de juego-->
 
     <div id="malla"></div>
 
-     <audio controls autoplay >
- <source src="./Audios/victoria.ogg" type ="audio/ogg"> balance=0 volume=100></bgsound> 
-</audio>
-</body>
-    <!-- aqui se incertan las funciones de javascrip que estan en otro archivo por conveniencia -->
-<script src="./Js/Funciones.js"></script>
+    <div class="cont-resultado">
+      <h3 id="resultado">0</h3>
+      <h3 id="resultado2">0</h3>
+    </div>
+
+    <div class="contenBtnAudio">
+      <audio id="audio">
+          <source src="/Audios/MusicaJuego.mp3" type="audio/mpeg">
+      </audio>
+      <button id="playPauseBtn" class="btnaudio" onclick="playPause()">Musica &#9658</button>
+      <button class="salir">
+        <a href="indexInicio.html">Salir</a>
+      </button>   
+    </div>
+  
+  </body>
+
+  <!-- aqui se incertan las funciones de javascrip que estan en otro archivo por conveniencia -->
+  <script src="./Js/Funciones.js"></script>
+  <script src="/Js/musica-fondo.js"></script>
 </html>
