@@ -4,8 +4,8 @@ var game = function(){
     let time = 50;
     let movement = 20;
     let movementBar = 35;
-    let width = document.documentElement.clientWidth - 30;
-    let height = document.documentElement.clientHeight - 30;
+    let width = document.documentElement.clientWidth - 24;
+    let height = document.documentElement.clientHeight - 24;
     let controlGame;
     let player1;
     let player2;
