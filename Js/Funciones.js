@@ -4,8 +4,8 @@ var game = function(){
     let time = 50;
     let movement = 20;
     let movementBar = 35;
-    let width = document.documentElement.clientWidth - movement;
-    let height = document.documentElement.clientHeight - movement;
+    let width = document.documentElement.clientWidth - 30;
+    let height = document.documentElement.clientHeight - 30;
     let controlGame;
     let player1;
     let player2;
@@ -63,6 +63,7 @@ var game = function(){
             swal("PUNTO Player2", "success");
             clearInterval(controlGame);
             start();
+            pelota.direction ===3;
         }if (contadorp2 == 5) {
             stop();
             swal("PLAYER 2", "El Ganador es el Jugador2 Con 5 Puntos", "success");
@@ -116,6 +117,7 @@ var game = function(){
            pelota.offsetTop >= bar1.offsetTop &&
            pelota.offsetTop <= (bar1.offsetTop + bar1.clientHeight)){
            sonido.play();
+           time--;
             return true;
         }
 
@@ -126,6 +128,7 @@ var game = function(){
            pelota.offsetTop >= bar2.offsetTop &&
            pelota.offsetTop <= (bar2.offsetTop + bar2.clientHeight)){
             sonido.play();
+            time--;
             return true;
         }
         return false;

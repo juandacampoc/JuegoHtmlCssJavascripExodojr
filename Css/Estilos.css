@@ -19,6 +19,7 @@ body, html {
     height: 100px;
     background: #F8CB2E;
     border: 4px solid #fff;
+    border-radius: 20px;
 }
 
 #bar1{
