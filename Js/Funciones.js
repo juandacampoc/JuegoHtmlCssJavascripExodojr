@@ -44,9 +44,7 @@ var game = function(){
     }
 
     let sonido = new Audio('../Audios/ponpong-def.mp3');
-   /*  function efecto() {
-        sonido.play();
-    } */
+ 
 
     function checkIfLost(){
         if(pelota.offsetLeft >= width){           
@@ -117,6 +115,7 @@ var game = function(){
         if(pelota.offsetLeft <= (bar1.clientWidth) &&
            pelota.offsetTop >= bar1.offsetTop &&
            pelota.offsetTop <= (bar1.offsetTop + bar1.clientHeight)){
+           sonido.play();
             return true;
         }
 
@@ -126,6 +125,7 @@ var game = function(){
         if(pelota.offsetLeft >= (width-bar2.clientWidth) &&
            pelota.offsetTop >= bar2.offsetTop &&
            pelota.offsetTop <= (bar2.offsetTop + bar2.clientHeight)){
+            sonido.play();
             return true;
         }
         return false;
