@@ -51,28 +51,23 @@ var game = function(){
     function checkIfLost(){
         if(pelota.offsetLeft >= width){           
             cont_player1.innerHTML = ++contadorp1;
-            alert("Punto player 1");
-
+            swal("PUNTO Player1", "success");
             clearInterval(controlGame);
-            //start();
             start();
-
         }if (contadorp1 == 5) {
             stop();
-            alert('El Ganador es el Jugador1 Con 5 Puntos')
+            swal("PLAYER 1", "El Ganador es el Jugador1 Con 5 Puntos", "success");
+            
         }
 
         if(pelota.offsetLeft < 0){
             cont_player2.innerHTML = ++contadorp2;
-            alert("Punto player 2");
-
+            swal("PUNTO Player2", "success");
             clearInterval(controlGame);
-            //start();
             start();
-
         }if (contadorp2 == 5) {
             stop();
-            alert('El Ganador es el Jugador2 Con 5 Puntos')
+            swal("PLAYER 2", "El Ganador es el Jugador2 Con 5 Puntos", "success");
         }
        
     }

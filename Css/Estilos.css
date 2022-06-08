@@ -44,14 +44,25 @@ body, html {
 
 
 .cont-resultado{
-  position: absolute;
-  display: inline-flex;
-  top: 0;
-  left: auto;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  left: 0rem;
+  bottom: 68rem;
+}
+
+@media only screen and (max-width: 1440px) {
+  .cont-resultado{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    left: 0rem;
+    bottom: 62rem;
+  }
 }
 .cont-resultado h3{
   font-size: 5rem;
-  margin: auto 10rem;
+/*   margin: auto 10rem; */
   color: #c71c81;
 }
 
