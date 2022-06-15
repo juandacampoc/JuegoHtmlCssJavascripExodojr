@@ -52,7 +52,7 @@ body, html {
   bottom: 68rem;
 }
 
-@media only screen and (max-width: 1440px) {
+/* @media only screen and (max-width: 1440px) {
   .cont-resultado{
     position: relative;
     display: flex;
@@ -60,7 +60,28 @@ body, html {
     left: 0rem;
     bottom: 62rem;
   }
+} */
+
+@media only screen and (max-width: 1024px) {
+  .cont-resultado{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    left: 0rem;
+    bottom: 39rem;
+  }
 }
+
+@media only screen and (min-width:1025px) and (max-width:1440px) {
+  .cont-resultado{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    left: 0rem;
+    bottom: 43rem;
+  }
+}
+
 .cont-resultado h3{
   font-size: 5rem;
 /*   margin: auto 10rem; */

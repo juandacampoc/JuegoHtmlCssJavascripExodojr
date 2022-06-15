@@ -1,7 +1,7 @@
 .fondo{
     margin: 0;
     min-height: 96vh;
-    background-image: url(/Images/fondoJuego.jpg);
+    background-image: url(../Images/fondoJuego.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
